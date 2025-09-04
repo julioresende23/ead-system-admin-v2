@@ -1,5 +1,5 @@
-@import "react-toastify/dist/ReactToastify.css";
-@import "swiper/css/bundle";
+@use "sass:meta";
+@import "react-toastify/dist/ReactToastify.css"; 
 @import "aos/dist/aos.css";
 
 @import "../../public/assets/css/animate.min.css";
@@ -12,4 +12,4 @@
 @import "../../public/assets/css/spacing.css";
 @import "../../public/assets/css/plyr.css";
 @import "../../public/assets/css/tg-cursor.css";
-@import "../../public/assets/scss/main.scss";
+@include meta.load-css("../../public/assets/scss/main.scss");

@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^3.9.0",
+    "@julioresende23/ead-api-client": "^1.0.1",
     "@reduxjs/toolkit": "^2.8.2",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
