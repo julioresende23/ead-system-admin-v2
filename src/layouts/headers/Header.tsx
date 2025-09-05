@@ -1,13 +1,14 @@
 import HeaderTop from "./menu/HeaderTop"
 import NavMenu from "./menu/NavMenu"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import MobileSidebar from "./menu/MobileSidebar"
 import UseSticky from "../../hooks/UseSticky"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import InjectableSvg from "../../hooks/InjectableSvg"
 import CustomSelect from "../../ui/CustomSelect"
 import TotalWishlist from "../../components/common/TotalWishlist"
 import TotalCart from "../../components/common/TotalCart"
+import { isAuthenticated, logout } from "@/api/auth-validation-api"
 
 const Header = () => {
 
@@ -16,9 +17,23 @@ const Header = () => {
    const handleSelectChange = (option: React.SetStateAction<null>) => {
       setSelectedOption(option);
    };
-
+   
    const { sticky } = UseSticky();
    const [isActive, setIsActive] = useState<boolean>(false);
+   const [isLogedd, setIsLogedd] = useState<boolean>(isAuthenticated());
+
+   useEffect(() => {
+      // Atualiza sempre que a página recarregar
+       console.log(isLogedd)
+      setIsLogedd(isAuthenticated());
+      console.log(isLogedd)
+   }, []);
+   const navigate = useNavigate();
+
+   const handleLogout = () => {
+      logout();           // limpa token (localStorage)
+      navigate("/login"); // manda pra tela de login
+   };
 
    return (
       <>
@@ -53,10 +68,18 @@ const Header = () => {
                                           <InjectableSvg src="/assets/img/icons/cart.svg" className="injectable" alt="img" />
                                           <TotalCart />
                                        </Link>
-                                    </li>
-                                    <li className="header-btn login-btn">
-                                       <Link to="/login">Log in</Link>
-                                    </li>
+                                    </li> 
+                                    {!isLogedd ? (
+                                       <li className="header-btn login-btn">
+                                          <Link to="/login">Log in</Link>
+                                       </li>
+                                    ) : (
+                                       <li className="header-btn logout-btn">
+                                          <button type="button" onClick={handleLogout} className="btn">
+                                          Log out
+                                          </button>
+                                       </li>
+                                    )}
                                  </ul>
                               </div>
                               <div className="mobile-login-btn">

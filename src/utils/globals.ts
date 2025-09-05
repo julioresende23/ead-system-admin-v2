@@ -1,5 +1,5 @@
 // src/globals.ts
-export const LOCAL_APP_API_BASE_URL = 'http://localhost:3000';
+export const LOCAL_APP_API_BASE_URL = 'http://localhost:3001';
 export const DEV_APP_API_BASE_URL   = 'https://dev-api-ead.glazzweb.com.br';
 export const STAGE_APP_API_BASE_URL = 'https://stage-api-ead.glazzweb.com.br';
 export const PROD_APP_API_BASE_URL  = 'https://api-ead.glazzweb.com.br';

@@ -3,7 +3,7 @@ import LoginForm from "../../../forms/LoginForm"
 
 const LoginArea = () => {
    return (
-      <section className="singUp-area section-py-120">
+      <section className="singUp-area section-py-120 pt-5">
          <div className="container">
             <div className="row justify-content-center">
                <div className="col-xl-6 col-lg-8">

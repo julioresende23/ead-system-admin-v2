@@ -11,8 +11,8 @@ function extractToken(res: any): string | null {
   const d = res?.data ?? {};
   const h = res?.headers ?? {};
   const headerAuth = (h?.authorization ?? h?.Authorization) as string | undefined;
-
-  if (typeof d.token === "string") return d.token;
+ 
+  if (typeof d.data.token === "string") return d.data.token;
   if (typeof d.accessToken === "string") return d.accessToken;
   if (typeof d.jwt === "string") return d.jwt;
   if (headerAuth?.startsWith("Bearer ")) return headerAuth.slice(7);
@@ -26,7 +26,7 @@ function extractToken(res: any): string | null {
 export async function login(
   credentials: AnyObj,
   options?: { variant?: "signin" | "signinApi" }
-): Promise<{ token: string | null; data: any }> {
+): Promise<{ token: string | null; data: any, user: any }> {
   const variant = options?.variant ?? "signin";
   const res =
     variant === "signinApi"
@@ -38,10 +38,12 @@ export async function login(
   if (token && isBrowser()) {
     try {
       localStorage.setItem(TOKEN_KEY, token);
+      localStorage.setItem('USER_KEYS', JSON.stringify(res.data.payload));
+   
     } catch {}
   }
 
-  return { token, data: res.data };
+  return { token, data: res.data, user: res.data.payload };
 }
 
 /** Remove o token do localStorage (logout local). */

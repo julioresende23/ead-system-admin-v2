@@ -8,7 +8,7 @@ const Login = () => {
       <>
          <Header />
          <main className="main-area fix">
-            <BreadcrumbOne title="Student Login" sub_title="Login" />
+            <BreadcrumbOne title="" sub_title="Login" />
             <LoginArea />
          </main>
          <Footer style={false} style_2={false} />
