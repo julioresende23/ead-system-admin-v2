@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const BreadcrumbOne = ({ title, sub_title, sub_title_2, style }: any) => {
    return (
-      <section className="breadcrumb__area breadcrumb__bg" style={{ backgroundImage: `url(/assets/img/bg/breadcrumb_bg.jpg)` }}>
+      <section className="breadcrumb__area breadcrumb__bg" style={{ backgroundImage: `url(/assets/img/bg/breadcrumb_bg.jpg)`,    padding: '10px' }}>
          <div className="container">
             <div className="row">
                <div className="col-12">

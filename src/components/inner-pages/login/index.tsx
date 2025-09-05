@@ -1,12 +1,12 @@
 import Footer from "../../../layouts/footers/Footer"
-import HeaderOne from "../../../layouts/headers/Header"
+import Header from "../../../layouts/headers/Header"
 import BreadcrumbOne from "../../common/breadcrumb/BreadcrumbOne"
 import LoginArea from "./LoginArea"
 
 const Login = () => {
    return (
       <>
-         <HeaderOne />
+         <Header />
          <main className="main-area fix">
             <BreadcrumbOne title="Student Login" sub_title="Login" />
             <LoginArea />
