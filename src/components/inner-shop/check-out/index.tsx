@@ -1,5 +1,5 @@
-import FooterOne from "../../../layouts/footers/FooterOne"
-import HeaderOne from "../../../layouts/headers/HeaderOne"
+import Footer from "../../../layouts/footers/Footer"
+import HeaderOne from "../../../layouts/headers/Header"
 import BreadcrumbOne from "../../common/breadcrumb/BreadcrumbOne"
 import CheckOutArea from "./CheckOutArea"
 
@@ -11,7 +11,7 @@ const CheckOut = () => {
             <BreadcrumbOne title="check-out" sub_title="check-out" />
             <CheckOutArea />
          </main>
-         <FooterOne style={false} style_2={false} />
+         <Footer style={false} style_2={false} />
       </>
    )
 }

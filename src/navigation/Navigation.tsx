@@ -1,12 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Home from '../pages/Home';
-import HomeTwo from '../pages/HomeTwo';
-import HomeEight from '../pages/HomeEight';
-import HomeSeven from '../pages/HomeSeven';
-import HomeSix from '../pages/HomeSix';
-import HomeFive from '../pages/HomeFive';
-import HomeFour from '../pages/HomeFour';
-import HomeThree from '../pages/HomeThree';
+import Home from '../pages/Home'; 
 import Course from '../pages/Course';
 import Lesson from '../pages/Lesson';
 import CourseDetails from '../pages/CourseDetails';
@@ -19,10 +12,8 @@ import Shop from '../pages/Shop';
 import ShopDetails from '../pages/ShopDetails';
 import Cart from '../pages/Cart';
 import Wishlist from '../pages/Wishlist';
-import CheckOut from '../pages/CheckOut';
-import Blog from '../pages/Blog';
-import BlogTwo from '../pages/BlogTwo';
-import BlogThree from '../pages/BlogThree';
+import CheckOut from '../pages/CheckOut'; 
+import BlogTwo from '../pages/Blog'; 
 import BlogDetails from '../pages/BlogDetails';
 import Login from '../pages/Login';
 import Registration from '../pages/Registration';
@@ -58,13 +49,6 @@ const AppNavigation = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home-two" element={<HomeTwo />} />
-        <Route path="/home-three" element={<HomeThree />} />
-        <Route path="/home-four" element={<HomeFour />} />
-        <Route path="/home-five" element={<HomeFive />} />
-        <Route path="/home-six" element={<HomeSix />} />
-        <Route path="/home-seven" element={<HomeSeven />} />
-        <Route path="/home-eight" element={<HomeEight />} />
         <Route path="/courses" element={<Course />} />
         <Route path="/course-details" element={<CourseDetails />} />
         <Route path="/lesson" element={<Lesson />} />
@@ -74,10 +58,8 @@ const AppNavigation = () => {
         <Route path="/events" element={<Event />} />
         <Route path="/events-details" element={<EventDetails />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/shop-details" element={<ShopDetails />} /> 
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog-2" element={<BlogTwo />} />
-        <Route path="/blog-3" element={<BlogThree />} />
+        <Route path="/shop-details" element={<ShopDetails />} />  
+        <Route path="/blog" element={<BlogTwo />} /> 
         <Route path="/blog-details" element={<BlogDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route

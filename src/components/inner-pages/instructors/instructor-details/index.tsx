@@ -1,5 +1,5 @@
-import FooterOne from "../../../../layouts/footers/FooterOne"
-import HeaderOne from "../../../../layouts/headers/HeaderOne"
+import Footer from "../../../../layouts/footers/Footer"
+import HeaderOne from "../../../../layouts/headers/Header"
 import BreadcrumbTwo from "../../../common/breadcrumb/BreadcrumbTwo"
 import InstructorDetailsArea from "./InstructorDetailsArea"
 
@@ -11,7 +11,7 @@ const InstructorsDetails = () => {
             <BreadcrumbTwo title="Robert Fox" sub_title="Instructors" />
             <InstructorDetailsArea />
          </main>
-         <FooterOne style={false} style_2={false} />
+         <Footer style={false} style_2={false} />
       </>
    )
 }

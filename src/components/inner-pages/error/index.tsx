@@ -1,5 +1,5 @@
-import FooterOne from "../../../layouts/footers/FooterOne"
-import HeaderOne from "../../../layouts/headers/HeaderOne"
+import Footer from "../../../layouts/footers/Footer"
+import HeaderOne from "../../../layouts/headers/Header"
 import ErrorArea from "./ErrorArea"
 
 const NotFound = () => {
@@ -9,7 +9,7 @@ const NotFound = () => {
          <main className="main-area fix">
             <ErrorArea />
          </main>
-         <FooterOne style={false} style_2={false} />
+         <Footer style={false} style_2={false} />
       </>
    )
 }

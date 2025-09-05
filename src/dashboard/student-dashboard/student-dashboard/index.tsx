@@ -1,5 +1,5 @@
-import FooterOne from '../../../layouts/footers/FooterOne'
-import HeaderOne from '../../../layouts/headers/HeaderOne'
+import Footer from '../../../layouts/footers/Footer'
+import HeaderOne from '../../../layouts/headers/Header'
 import StudentDashboardArea from './StudentDashboardArea'
 
 const StudentDashboard = () => {
@@ -9,7 +9,7 @@ const StudentDashboard = () => {
          <main className="main-area fix">
             <StudentDashboardArea />
          </main>
-         <FooterOne />
+         <Footer />
       </>
    )
 }

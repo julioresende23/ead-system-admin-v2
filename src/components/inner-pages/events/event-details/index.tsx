@@ -1,5 +1,5 @@
-import FooterOne from "../../../../layouts/footers/FooterOne"
-import HeaderOne from "../../../../layouts/headers/HeaderOne"
+import Footer from "../../../../layouts/footers/Footer"
+import HeaderOne from "../../../../layouts/headers/Header"
 import BreadcrumbOne from "../../../common/breadcrumb/BreadcrumbOne"
 import EventDetailsArea from "./EventDetailsArea"
 
@@ -11,7 +11,7 @@ const EventDetails = () => {
             <BreadcrumbOne title="Resolving Conflicts Between Designers" sub_title="Events" sub_title_2="Resolving Conflicts Between Designers" style={true} />
             <EventDetailsArea />
          </main>
-         <FooterOne style={false} style_2={false} />
+         <Footer style={false} style_2={false} />
       </>
    )
 }

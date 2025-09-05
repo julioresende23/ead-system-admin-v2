@@ -1,5 +1,5 @@
-import FooterOne from "../../../layouts/footers/FooterOne"
-import HeaderOne from "../../../layouts/headers/HeaderOne"
+import Footer from "../../../layouts/footers/Footer"
+import HeaderOne from "../../../layouts/headers/Header"
 import BreadcrumbOne from "../../common/breadcrumb/BreadcrumbOne"
 import BlogDetailsArea from "./BlogDetailsArea"
 
@@ -11,7 +11,7 @@ const BlogDetails = () => {
             <BreadcrumbOne title="Blog Details" sub_title="Blogs" sub_title_2="How To Become idiculously Self-Aware In 20 Minutes" style={true} />
             <BlogDetailsArea />
          </main>
-         <FooterOne style={false} style_2={true}  />
+         <Footer style={false} style_2={true}  />
       </>
    )
 }

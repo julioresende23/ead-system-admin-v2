@@ -1,10 +1,9 @@
-import FooterOne from "../../../layouts/footers/FooterOne"
-import HeaderOne from "../../../layouts/headers/HeaderOne"
+import Footer from "../../../layouts/footers/Footer"
+import HeaderOne from "../../../layouts/headers/Header"
 import BrandOne from "../../common/brands/BrandOne"
 import BreadcrumbOne from "../../common/breadcrumb/BreadcrumbOne"
-import Features from "../../homes/home-one/Features"
-import Newsletter from "../../homes/home-one/Newsletter"
-import Feature from "../../homes/home-two/Feature"
+import Features from "../../home/Features"
+import Newsletter from "../../home/Newsletter" 
 import About from "./About"
 import Testimonial from "./Testimonial"
 
@@ -16,12 +15,12 @@ const AboutUs = () => {
             <BreadcrumbOne title="Who We Are" sub_title="About Us" />
             <About />
             <BrandOne />
-            <Feature style={true} />
+            {/* <Feature style={true} /> */}
             <Newsletter />
             <Features />
             <Testimonial />
          </main>
-         <FooterOne style={false} style_2={false} />
+         <Footer style={false} style_2={false} />
       </>
    )
 }

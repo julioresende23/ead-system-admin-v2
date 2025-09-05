@@ -1,5 +1,5 @@
-import FooterOne from "../../../layouts/footers/FooterOne";
-import HeaderOne from "../../../layouts/headers/HeaderOne";
+import Footer from "../../../layouts/footers/Footer";
+import HeaderOne from "../../../layouts/headers/Header";
 import BreadcrumbTwo from "../../common/breadcrumb/BreadcrumbTwo";
 import CourseDetailsArea from "./CourseDetailsArea";
 
@@ -12,7 +12,7 @@ const CourseDetails = () => {
             <BreadcrumbTwo title="Resolving Conflicts Between Designers And Engineers" sub_title="Courses" />
             <CourseDetailsArea />
          </main>
-         <FooterOne style={false} style_2={true} />
+         <Footer style={false} style_2={true} />
       </>
    );
 };

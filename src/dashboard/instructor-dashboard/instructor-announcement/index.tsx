@@ -1,5 +1,5 @@
-import FooterOne from '../../../layouts/footers/FooterOne'
-import HeaderOne from '../../../layouts/headers/HeaderOne'
+import Footer from '../../../layouts/footers/Footer'
+import HeaderOne from '../../../layouts/headers/Header'
 import InstructorAnnouncementArea from './InstructorAnnouncementArea'
 
 const InstructorAnnouncement = () => {
@@ -9,7 +9,7 @@ const InstructorAnnouncement = () => {
          <main className="main-area fix">
             <InstructorAnnouncementArea />
          </main>
-         <FooterOne />
+         <Footer />
       </>
    )
 }
