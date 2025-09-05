@@ -43,7 +43,9 @@ import NotFound from '../pages/NotFound';
 import RequireAuth from "@/auth/RequireAuth";
 import PublicOnlyRoute from "@/auth/PublicOnlyRoute";
 
-const protect = (element: JSX.Element) => <RequireAuth>{element}</RequireAuth>;
+const protect = (element: JSX.Element, roles?: string | string[]) => (
+  <RequireAuth allowedRoles={roles}>{element}</RequireAuth>
+);
 const AppNavigation = () => {
   return (
     <Router>
@@ -83,27 +85,29 @@ const AppNavigation = () => {
         <Route path="/wishlist" element={protect(<Wishlist />)} />
         <Route path="/check-out" element={protect(<CheckOut />)} />
 
-        <Route path="/instructor-dashboard" element={protect(<InstructorDashboard />)} />
-        <Route path="/instructor-profile" element={protect(<InstructorProfile />)} />
-        <Route path="/instructor-enrolled-courses" element={protect(<InstructorEnrollCourse />)} />
-        <Route path="/instructor-wishlist" element={protect(<InstructorWishlist />)} />
-        <Route path="/instructor-review" element={protect(<InstructorReview />)} />
-        <Route path="/instructor-attempts" element={protect(<InstructorAttempt />)} />
-        <Route path="/instructor-history" element={protect(<InstructorHistory />)} />
-        <Route path="/instructor-courses" element={protect(<InstructorCourses />)} />
-        <Route path="/instructor-announcement" element={protect(<InstructorAnnouncement />)} />
-        <Route path="/instructor-quiz" element={protect(<InstructorQuiz />)} />
-        <Route path="/instructor-assignment" element={protect(<InstructorAssignment />)} />
-        <Route path="/instructor-setting" element={protect(<InstructorSetting />)} />
+         {/* role = Instructor */}
+        <Route path="/instructor-dashboard" element={protect(<InstructorDashboard />, "Instructor")} />
+        <Route path="/instructor-profile" element={protect(<InstructorProfile />, "Instructor")} />
+        <Route path="/instructor-enrolled-courses" element={protect(<InstructorEnrollCourse />, "Instructor")} />
+        <Route path="/instructor-wishlist" element={protect(<InstructorWishlist />, "Instructor")} />
+        <Route path="/instructor-review" element={protect(<InstructorReview />, "Instructor")} />
+        <Route path="/instructor-attempts" element={protect(<InstructorAttempt />, "Instructor")} />
+        <Route path="/instructor-history" element={protect(<InstructorHistory />, "Instructor")} />
+        <Route path="/instructor-courses" element={protect(<InstructorCourses />, "Instructor")} />
+        <Route path="/instructor-announcement" element={protect(<InstructorAnnouncement />, "Instructor")} />
+        <Route path="/instructor-quiz" element={protect(<InstructorQuiz />, "Instructor")} />
+        <Route path="/instructor-assignment" element={protect(<InstructorAssignment />, "Instructor")} />
+        <Route path="/instructor-setting" element={protect(<InstructorSetting />, "Instructor")} />
 
-        <Route path="/student-dashboard" element={protect(<StudentDashboard />)} />
-        <Route path="/student-profile" element={protect(<StudentProfile />)} />
-        <Route path="/student-enrolled-courses" element={protect(<StudentEnrollCourse />)} />
-        <Route path="/student-wishlist" element={protect(<StudentWishlist />)} />
-        <Route path="/student-review" element={protect(<StudentReview />)} />
-        <Route path="/student-attempts" element={protect(<StudentAttempt />)} />
-        <Route path="/student-history" element={protect(<StudentHistory />)} />
-        <Route path="/student-setting" element={protect(<StudentSetting />)} />
+        {/* role = Student */}
+        <Route path="/student-dashboard" element={protect(<StudentDashboard />, "Student")} />
+        <Route path="/student-profile" element={protect(<StudentProfile />, "Student")} />
+        <Route path="/student-enrolled-courses" element={protect(<StudentEnrollCourse />, "Student")} />
+        <Route path="/student-wishlist" element={protect(<StudentWishlist />, "Student")} />
+        <Route path="/student-review" element={protect(<StudentReview />, "Student")} />
+        <Route path="/student-attempts" element={protect(<StudentAttempt />, "Student")} />
+        <Route path="/student-history" element={protect(<StudentHistory />, "Student")} />
+        <Route path="/student-setting" element={protect(<StudentSetting />, "Student")} />
        {/*   <Route path="/blog-details/:id" element={<DynamicBlogDeatils />} />   */}
         <Route path="*" element={<NotFound />} />
       </Routes>

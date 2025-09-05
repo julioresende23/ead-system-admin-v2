@@ -54,7 +54,7 @@ type Props = {
         { email: form.email, password: form.password },
         { variant }
       );
-      console.log( data)
+      console.log(data)
       // Se o usuário NÃO quiser "remember me", mova o token para sessionStorage
       if (!form.remember && typeof window !== "undefined") {
         const t = token ?? getToken(); // se o util já gravou em localStorage, recupere
@@ -72,7 +72,12 @@ type Props = {
 
       toast.success("Login successfully", { position: "top-center" });
       reset({ email: "", password: "", remember: form.remember });
-      navigate(redirectTo);
+      if(user.role === 'Instructor') {
+         navigate('/instructor-dashboard');
+      } else {
+         navigate(redirectTo);
+      }
+   
     } catch (err: any) {
       // Tenta extrair mensagem amigável do backend
       const apiMsg =
