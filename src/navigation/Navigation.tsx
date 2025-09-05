@@ -104,7 +104,7 @@ const AppNavigation = () => {
         <Route path="/student-attempts" element={protect(<StudentAttempt />)} />
         <Route path="/student-history" element={protect(<StudentHistory />)} />
         <Route path="/student-setting" element={protect(<StudentSetting />)} />
-        {/* <Route path="/blog-details/:id" element={<DynamicBlogDeatils />} /> */}
+       {/*   <Route path="/blog-details/:id" element={<DynamicBlogDeatils />} />   */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
